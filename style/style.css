@@ -66,6 +66,7 @@ body {
 
 .hero {
     background: url('../images/2020-09-30_15.47.11.png');
+    width: 100%;
     background-size: cover;
     min-height: 240px;
 }
@@ -80,21 +81,23 @@ body {
 }
 /*hero*/
 
-/*info grid*/
+/*info grid 1*/
 .h3info {
     font-size: 8px;
     text-align: center;
 }
 
-.info-grid {
+.info-grid1 {
     display: grid;
     grid-template-areas: 
-        "text-box text-box"
-        "pickaxe chest"
-        "creeper sheep";
+        "text-box "
+        "pickaxe" 
+        "chest"
+        "creeper"
+        "sheep";
     background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
+    width: 100%;
     background-size: cover;
-    min-height: 240px;
 }
 
 .info-grid__info-item--wide.bg-textbox { 
@@ -111,12 +114,12 @@ body {
 
 .info-grid__info-item--small.bg-light-grey1 {
     grid-area: pickaxe;
-    background-color: #696969;
+    background-color: #5B5B5B;
 }
 
 .info-grid__info-item--small.bg-dark-grey1 {
     grid-area: chest;
-    background-color: #5B5B5B;
+    background-color: #696969;
 }
 
 .info-grid__info-item--small.bg-light-grey2 {
@@ -128,10 +131,42 @@ body {
     grid-area: sheep;
     background-color: #696969;
 }
-/*info grid*/
+/*info grid 1*/
 
 /*cavepicsection*/
 .cavepic {
-    justify-content: center;
+    width: 100%;
+    height: auto;
 }
 /*cavepicsection*/
+
+/*info grid 2*/
+.info-grid2 {
+    display: grid;
+    grid-template-areas: 
+        "minerals"
+        "dungeons"
+        "mineshafts" 
+        "lava";
+}
+
+.info-grid__info-item--small.bg-light-grey1-1 {
+    grid-area: minerals;
+    background-color: #5B5B5B;
+}
+
+.info-grid__info-item--small.bg-dark-grey1-1 {
+    grid-area: dungeons;
+    background-color: #696969;
+}
+
+.info-grid__info-item--small.bg-light-grey2-2 {
+    grid-area: mineshafts;
+    background-color: #5B5B5B;
+}
+
+.info-grid__info-item--small.bg-dark-grey2-2 {
+    grid-area: lava;
+    background-color: #696969;
+}
+/*info grid 2*/
