@@ -1,0 +1,137 @@
+/*hero*/
+
+/*menu*/
+:root {
+    --menu-color: #477035;
+}
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+.nav {
+    background-color: var(--menu-color);
+    color: white;
+    position: fixed top;
+    width: 100vw;
+    margin-bottom: 0;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li {
+    padding: 0.4rem;
+}
+.nav ul li:not(:first-child) {
+    display: none;
+}
+.nav.show-us-the-menu {
+    background-color: transparent;
+}
+.nav.show-us-the-menu ul li:not(:first-child){
+    display: block;
+    min-width: 120px;
+    background-color: rgb(0 0 0 / 59%);
+    padding-left: 1rem;
+}
+.nav.show-us-the-menu ul li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--menu-color);
+    padding-bottom: 0.55rem;
+}
+.nav.show-us-the-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-inline-start: 0;
+}
+.burger:hover i {
+    color: black;
+}
+@media screen and (min-width: 600px) {
+    .nav ul li:first-child {
+        display: none;
+    }
+    .nav ul li:not(:first-child) {
+        display: block;
+    }
+}
+/*menu*/
+
+
+.hero {
+    background: url('../images/2020-09-30_15.47.11.png');
+    background-size: cover;
+    min-height: 240px;
+}
+
+.hero h1 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+}
+/*hero*/
+
+/*info grid*/
+.h3info {
+    font-size: 8px;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-areas: 
+        "text-box text-box"
+        "pickaxe chest"
+        "creeper sheep";
+    background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
+    background-size: cover;
+    min-height: 240px;
+}
+
+.info-grid__info-item--wide.bg-textbox { 
+    grid-area: text-box;
+    height: calc(100vw / 4);
+    font-size: 8px;
+    text-align: center;
+    background-color: #3E2B1D;
+    color: white;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info-grid__info-item--small.bg-light-grey1 {
+    grid-area: pickaxe;
+    background-color: #696969;
+}
+
+.info-grid__info-item--small.bg-dark-grey1 {
+    grid-area: chest;
+    background-color: #5B5B5B;
+}
+
+.info-grid__info-item--small.bg-light-grey2 {
+    grid-area: creeper;
+    background-color: #5B5B5B;
+}
+
+.info-grid__info-item--small.bg-dark-grey2 {
+    grid-area: sheep;
+    background-color: #696969;
+}
+/*info grid*/
+
+/*cavepicsection*/
+.cavepic {
+    justify-content: center;
+}
+/*cavepicsection*/
