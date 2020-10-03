@@ -2,7 +2,7 @@
 
 /*menu*/
 :root {
-    --menu-color: #477035;
+    --menu-color: #5B5B5B;
 }
 body {
     margin: 0;
@@ -82,9 +82,27 @@ body {
 /*hero*/
 
 /*info grid 1*/
+.pinfo {
+    font-size: 6px;
+    line-height: 15px;
+    padding: 1rem;
+    color: white;
+}
+
+.ulinfo {
+    font-size: 6px;
+    line-height: 15px;
+    padding: 1rem;
+    color: white;
+    list-style: none;
+    text-align: center;
+}
+
 .h3info {
     font-size: 8px;
     text-align: center;
+    color: white;
+    margin-bottom: 1rem;
 }
 
 .info-grid1 {
@@ -97,7 +115,9 @@ body {
         "sheep";
     background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
     width: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-image: absolute;
+    background-position-y: 90rem;
 }
 
 .info-grid__info-item--wide.bg-textbox { 
@@ -105,11 +125,25 @@ body {
     height: calc(100vw / 4);
     font-size: 8px;
     text-align: center;
-    background-color: #3E2B1D;
+    background-color: #5B5B5B;
     color: white;
-    margin-bottom: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-bottom: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 0.9rem;
+}
+
+.info-grid__info-item--small.bg-light-grey1, .info-grid__info-item--small.bg-dark-grey1, 
+.info-grid__info-item--small.bg-light-grey2, .info-grid__info-item--small.bg-dark-grey2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
 }
 
 .info-grid__info-item--small.bg-light-grey1 {
@@ -134,7 +168,7 @@ body {
 /*info grid 1*/
 
 /*cavepicsection*/
-.cavepic {
+.cavepic2 {
     width: 100%;
     height: auto;
 }
@@ -144,29 +178,90 @@ body {
 .info-grid2 {
     display: grid;
     grid-template-areas: 
-        "minerals"
-        "dungeons"
-        "mineshafts" 
-        "lava";
+        "minerals dungeons"
+        "mineshafts dimensions";     
 }
 
 .info-grid__info-item--small.bg-light-grey1-1 {
     grid-area: minerals;
-    background-color: #5B5B5B;
+    background-color: #696969;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
 .info-grid__info-item--small.bg-dark-grey1-1 {
     grid-area: dungeons;
-    background-color: #696969;
+    background-color: #5B5B5B;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
 .info-grid__info-item--small.bg-light-grey2-2 {
     grid-area: mineshafts;
     background-color: #5B5B5B;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
 .info-grid__info-item--small.bg-dark-grey2-2 {
-    grid-area: lava;
+    grid-area: dimensions;
     background-color: #696969;
+    padding-top: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
+
+/*svgs*/
+
+.info-grid__info-item--small.bg-light-grey1-1, .info-grid__info-item--small.bg-dark-grey1-1, 
+.info-grid__info-item--small.bg-light-grey2-2, .info-grid__info-item--small.bg-dark-grey2-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*svgs*/
+
 /*info grid 2*/
+
+/*footer*/
+
+.bedrock {
+    width: 100%;
+    background-size: cover;
+    min-height: 240px;
+}
+
+
+
+/*up*/
+.up {
+    background-color: #5B5B5B;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.up img {
+    width: 20px;
+    margin:auto;
+    padding-top: 10px;
+}
+
+.up a {
+    margin: 0;
+    padding-bottom: 15px;
+    color: rgba(250, 250, 250, 0.7);
+}
+
+.up a:hover {
+    text-shadow: 4px 4px 4px rgb(105, 105, 105);
+}
+/*up*/
+
+/*footer*/
