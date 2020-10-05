@@ -13,14 +13,15 @@ body {
     background-color: var(--menu-color);
     color: white;
     position: fixed top;
-    width: 100vw;
+    max-width: 100vw;
     margin-bottom: 0;
 }
 
 .list-item-nav {
     text-align: right;
-    width: 100vw;
+    max-width: 100vw;
 }
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -28,21 +29,31 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .nav ul li {
     padding: 0.4rem;
 }
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
 .nav ul li:not(:first-child) {
     display: none;
 }
+
 .nav.show-us-the-menu {
     background-color: transparent;
 }
+
 .nav.show-us-the-menu ul li:not(:first-child){
     display: block;
     min-width: 120px;
     background-color: var(--menu-color);
     padding-left: 1rem;
 }
+
 .nav.show-us-the-menu ul li:first-child{
     display: flex;
     justify-content: flex-end;
@@ -50,12 +61,14 @@ body {
     background-color: var(--menu-color);
     padding-bottom: 0.55rem;
 }
+
 .nav.show-us-the-menu ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding-inline-start: 0;
 }
+
 .burger:hover i {
     color: black;
 }
@@ -69,14 +82,14 @@ body {
     background-size: cover;
     min-height: 90%;
     background-position: top;
-    height: 50vw;
+    height: 62vw;
 }
 
 .hero h1 {
     text-align: center;
     margin-top: 0;
-    padding-top: 20px;
-    font-size: 20px;
+    padding-top: 10vw;
+    font-size: 4vw;
     line-height: 40px;
     color: white;
 }
@@ -84,15 +97,15 @@ body {
 
 /*info grid 1*/
 .pinfo {
-    font-size: 6px;
-    line-height: 15px;
+    font-size: 2vw;
+    line-height: 3vw;
     padding: 1rem;
     color: white;
 }
 
 .ulinfo {
-    font-size: 6px;
-    line-height: 15px;
+    font-size: 2vw;
+    line-height: 3vw;
     padding: 1rem;
     color: white;
     list-style: none;
@@ -100,7 +113,7 @@ body {
 }
 
 .h3info {
-    font-size: 8px;
+    font-size: 3vw;
     text-align: center;
     color: white;
 }
@@ -124,16 +137,14 @@ body {
 
 .info-grid__info-item--wide.bg-textbox { 
     grid-area: text-box;
-    font-size: 8px;
+    font-size: 2.5vw;
     text-align: center;
     background-color: #5B5B5B;
     color: white;
-    margin-bottom: 60px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
     letter-spacing: 0.1rem;
-    line-height: 0.9rem;
+    line-height: 2rem;
 }
 
 .basictips, .info-grid__info-item--small.bg-light-grey1basic, .info-grid__info-item--small.bg-light-grey2basic, .info-grid__info-item--small.bg-dark-grey1, 
@@ -278,9 +289,6 @@ body {
 
 /*media queries*/
 @media screen and (min-width: 400px) {
-
-    /*hero*/
-
     .hero {
         background: url('../images/2020-09-30_15.47.11.png');
         width: 100%;
@@ -289,11 +297,7 @@ body {
         background-position: top;
         height: 60vw;
     }
-
-    /*hero*/
-
-    /*infogrid 1*/
-
+    
     .info-grid1 {
         display: grid;
         grid-template-areas: 
@@ -311,23 +315,8 @@ body {
         background-position-y: 10rem;
     }
 
-    .info-grid__info-item--wide.bg-textbox { 
-        grid-area: text-box;
-        font-size: 8px;
-        text-align: center;
-        background-color: #5B5B5B;
-        color: white;
-        margin-bottom: 60px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.1rem;
-        letter-spacing: 0.1rem;
-        line-height: 0.9rem;
-    }
-
-    /*infogrid 1*/
-
 }
+/*mediaqueires*/
 
 @media screen and (min-width: 700px) {
 
@@ -357,43 +346,7 @@ body {
 
     /*menu*/
 
-    /*hero*/
-
-    .hero h1 {
-        text-align: center;
-        margin-top: 0;
-        padding-top: 10rem;
-        font-size: 60px;
-        line-height: 40px;
-        color: white;
-    }
-
-    /*hero*/
-
     /*infogrid 1*/
-
-    .pinfo {
-        font-size: 20px;
-        line-height: 30px;
-        padding: 2rem;
-        color: white;
-    }
-    
-    .ulinfo {
-        font-size: 20px;
-        line-height: 30px;
-        padding: 1rem;
-        color: white;
-        list-style: none;
-        text-align: center;
-    }
-    
-    .h3info {
-        line-height: 30px;
-        font-size: 30px;
-        text-align: center;
-        color: white;
-    }
 
     .basictips, .info-grid__info-item--small.bg-light-grey1basic, .info-grid__info-item--small.bg-dark-grey1, 
     .info-grid__info-item--small.bg-dark-grey2 {
@@ -405,25 +358,10 @@ body {
         margin-right: 2rem;
     }
 
-    .info-grid__info-item--wide.bg-textbox { 
-        grid-area: text-box;
-        font-size: 12px;
-        text-align: center;
-        background-color: #5B5B5B;
-        color: white;
-        margin-bottom: 60px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.1rem;
-        letter-spacing: 0.1rem;
-        line-height: 1.8rem;
-        max-height: 15vw;
-    }
-
     .info-grid1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 15vw 15vw 45vw 35vw 45vw;
+        grid-template-rows: 40vw 25vw 125vw 90vw 95vw;
         grid-template-areas: 
             "text-box text-box"
             "basictips basictips" 
@@ -454,16 +392,12 @@ body {
 
     .info-grid__info-item--wide.bg-textbox { 
         grid-area: text-box;
-        font-size: 30px;
         text-align: center;
         background-color: #5B5B5B;
         color: white;
-        margin-bottom: 60px;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.1rem;
+        padding: 2rem;
         letter-spacing: 0.1rem;
-        line-height: 3rem;
+        line-height: 3.7rem;
     }
     /*infogrid 1*/
 
@@ -471,7 +405,7 @@ body {
 
     .info-grid2 {
         display: grid;
-        grid-template-rows: 20vw 20vw 20vw 20vw;
+        grid-template-rows: 15vw 15vw 15vw 15vw;
         grid-template-areas: 
             "minerals dungeons"
             "minerals dungeons"
@@ -484,8 +418,8 @@ body {
     /*svgs*/
 
     .silverfish-svg, .pickaxe-svg, .skeleton-svg, .enderman-svg {
-        width: 500px;
-        height: 500px;
+        width: 25vw;
+        height: 24vw;
     }
 
     /*svgs*/
@@ -507,17 +441,76 @@ body {
     }
 
     .text-take-me-up {
-        font-size: 50px;
+        font-size: 3vw;
         margin: 0;
         padding-bottom: 30px;
-        color: rgba(250, 250, 250, 0.7);
+        color: rgb(255, 254, 254);
     }
 
     .up a:hover {
-        text-shadow: 4px 4px 4px rgb(3, 3, 3);
+        text-shadow: 0.2rem 0.2rem 0.2rem rgb(3, 3, 3);
     }
 
     /*up*/
 }
+/*textbox fixes*/
+@media screen and (min-width: 850px) {
+    .info-grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 35vw 25vw 125vw 90vw 95vw;
+        grid-template-areas: 
+            "text-box text-box"
+            "basictips basictips" 
+            "axe1 axe2"
+            "chest creeper"
+            "sheep sheep";
+        background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
+        width: 100%;
+        background-size: contain;
+        background-image: absolute;
+        background-position-y: 10rem;
+    }   
+}
+
+@media screen and (min-width: 1000px) {
+    .info-grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 30vw 25vw 125vw 90vw 95vw;
+        grid-template-areas: 
+            "text-box text-box"
+            "basictips basictips" 
+            "axe1 axe2"
+            "chest creeper"
+            "sheep sheep";
+        background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
+        width: 100%;
+        background-size: contain;
+        background-image: absolute;
+        background-position-y: 10rem;
+    }   
+}
+
+@media screen and (min-width: 1300px) {
+    .info-grid1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 25vw 25vw 125vw 90vw 95vw;
+        grid-template-areas: 
+            "text-box text-box"
+            "basictips basictips" 
+            "axe1 axe2"
+            "chest creeper"
+            "sheep sheep";
+        background-image: url('../images/2020-09-30_15.47.54\ \(1\).png');
+        width: 100%;
+        background-size: contain;
+        background-image: absolute;
+        background-position-y: 10rem;
+    }   
+}
+
+/*textbox fixes*/
 
 /*media queries*/
