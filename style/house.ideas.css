@@ -1,0 +1,67 @@
+/*menu*/
+:root {
+    --menu-color: #5B5B5B;
+}
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+.nav {
+    background-color: var(--menu-color);
+    color: white;
+    position: fixed top;
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+.list-item-nav {
+    text-align: right;
+    width: 100vw;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li {
+    padding: 0.4rem;
+}
+.nav ul li:not(:first-child) {
+    display: none;
+}
+.nav.show-us-the-menu {
+    background-color: transparent;
+}
+.nav.show-us-the-menu ul li:not(:first-child){
+    display: block;
+    min-width: 120px;
+    background-color: var(--menu-color);
+    padding-left: 1rem;
+}
+.nav.show-us-the-menu ul li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--menu-color);
+    padding-bottom: 0.55rem;
+}
+.nav.show-us-the-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-inline-start: 0;
+}
+.burger:hover i {
+    color: black;
+}
+@media screen and (min-width: 600px) {
+    .nav ul li:first-child {
+        display: none;
+    }
+    .nav ul li:not(:first-child) {
+        display: block;
+    }
+}
+/*menu*/
