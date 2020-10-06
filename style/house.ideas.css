@@ -7,7 +7,7 @@
     --light-lightgrey: #A8A9AD;
 }
 
-.text-images {
+.text-images1, .text-images2, .text-images3, .text-images4 {
     text-align: center;
     background-color: var(--darkgrey);
     color: var(--text-color);
@@ -92,25 +92,25 @@ body {
 .img1 {
     max-width: 100vw;
     padding: 1rem;
-    background-color: var(--lightgrey)
+    background-color: var(--lightgrey);
 }
 
 .img2 {
     max-width: 100vw;
     padding: 1rem;
-    background-color: var(--darkgrey)
+    background-color: var(--darkgrey);
 }
 
 .img3 {
     max-width: 100vw;
     padding: 1rem;
-    background-color: var(--lightgrey)
+    background-color: var(--lightgrey);
 }
 
 .img4 {
     max-width: 100vw;
     padding: 1rem;
-    background-color: var(--darkgrey)
+    background-color: var(--darkgrey);
 }
 /*image collection*/
 
@@ -199,5 +199,73 @@ body {
     }
     
     /*up*/
+
+    @media screen and (min-width: 850px) {
+        .imagecollection {
+            display: grid;
+            grid-template-areas: "text1 text2"
+                                 "img1 img2"
+                                 "text3 text4"
+                                 "img3 img4";
+            margin-left: 11rem;
+            margin-right: 5rem;
+        }
+
+        .img1 {
+            max-width: 39vw;
+            max-height: 21vw;
+            padding: 1rem;
+            background-color: var(--lightgrey);
+            grid-area: img1;
+        }
+        
+        .img2 {
+            max-width: 37vw;
+            max-height: 21vw;
+            padding: 1rem;
+            background-color: var(--darkgrey);
+            grid-area: img2;
+            
+        }
+        
+        .img3 {
+            max-width: 39vw;
+            max-height: 21vw;
+            padding: 1rem;
+            background-color: var(--lightgrey);
+            grid-area: img3;
+            
+        }
+        
+        .img4 {
+            max-width: 39vw;
+            max-height: 21vw;
+            padding: 1rem;
+            background-color: var(--darkgrey);
+            grid-area: img4;
+            
+        }
+
+        .text-images1 {
+            grid-area: text1;
+            max-width: 36vw;
+        }
+
+        .text-images2 {
+            grid-area: text2;
+            max-width: 36vw;
+        }
+
+        .text-images3 {
+            grid-area: text3;
+            max-width: 36vw;
+        }
+
+        .text-images4 {
+            grid-area: text4;
+            max-width: 36vw;
+        }
+        /*image collection*/
+    }
 }
 /*media queires*/
